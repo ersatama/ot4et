@@ -12,9 +12,11 @@ use App\Domain\Contracts\NewsContract;
 class NewsController extends Controller
 {
     protected $newsService;
+
     public function __construct(NewsService $newsService) {
         $this->newsService  =   $newsService;
     }
+
     public function index(Request $request)
     {
         return response([

@@ -181,7 +181,6 @@ return [
         App\Providers\Repository\ServiceRepositoryProvider::class,
         App\Providers\Repository\PaymentInvoiceRepositoryProvider::class,
         App\Providers\Repository\NewsRepositoryProvider::class,
-        App\Providers\Repository\FrequentlyAskedQuestionRepositoryProvider::class,
         App\Providers\Repository\OrganizationRepositoryProvider::class,
         App\Providers\Repository\PartnerRepositoryProvider::class,
         App\Providers\Repository\DimensionRepositoryProvider::class,

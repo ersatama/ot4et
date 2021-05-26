@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Faq extends Model
 {
+    use \Backpack\CRUD\app\Models\Traits\CrudTrait;
     use HasFactory;
     protected $fillable =   FaqContract::FILLABLE;
 }

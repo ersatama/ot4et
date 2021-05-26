@@ -19,8 +19,7 @@ class PaymentInvoiceController extends Controller
         $this->paymentInvoiceService    =   $paymentInvoiceService;
     }
 
-    public function index(Request $request, Organization $organization)
-    {
+    public function index(Request $request, Organization $organization) {
         $invoices   =   $this->paymentInvoiceService->getByOrganizationIdAndLikeDocumentNumber($request->all(),$organization->id);
 
         return response([
@@ -28,8 +27,7 @@ class PaymentInvoiceController extends Controller
         ], 200);
     }
 
-    public function store(StorePaymentInvoiceRequest $request)
-    {
+    public function store(StorePaymentInvoiceRequest $request) {
         return response([
             PaymentInvoiceContract::INVOICE =>  $this->paymentInvoiceService->create($request->all())
         ], 201);

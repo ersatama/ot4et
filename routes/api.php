@@ -36,7 +36,7 @@ Route::prefix('/auth')->group(function(){
     Route::post('/register/egov',[RegisterController::class,'registerEgov']);
 });
 
-Route::prefix('/faq')->group(function(){
+Route::prefix('/faq')->group(function() {
     Route::get('/',[QuestionsController::class,'list']);
     Route::get('/{id}',[QuestionsController::class,'getById']);
 });
